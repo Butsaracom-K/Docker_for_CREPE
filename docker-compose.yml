@@ -1,0 +1,6 @@
+services:
+  my-ubuntu:
+    build: .
+    image: crepe_project_namtan/ubuntu-22
+    volumes:
+      - ./CREPE_Dir/CREPE/Results  # Direct link to your local files
