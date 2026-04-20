@@ -130,7 +130,7 @@ for i in np.arange(6, 91, 1):
         reducedchi_2_combine_Middle = round(reducedchi2_combine(theta_max), 4)
         print('reducedchi_2 = ', reducedchi_2_Middle)
         print('reducedchi_2po = ', reducedchi_2po_Middle)
-	print('reducedchi_2_combine_Middle = ', reducedchi_2_combine_Middle)
+	    print('reducedchi_2_combine_Middle = ', reducedchi_2_combine_Middle)
         ##### Write down parameters Fitting in dat file
         file.write(f'{ATNF_NamePSR_Cut_Milli[i]} \t {ATNF_Edot_Cut_Milli[i]} \t {ATNF_Age_Cut_Milli[i]} \t {ATNF_Dist_Cut_Milli[i]} \t {gamma:.2f} \t {e_cut:.2f} \t {eta:.2f} \t {eta*edot} \t {e_max(td).value:.2f} \t {reducedchi_2_Middle:.2f} \t {reducedchi_2po_Middle:.2f} \t {reducedchi_2_combine_Middle}\n')
         file.flush()

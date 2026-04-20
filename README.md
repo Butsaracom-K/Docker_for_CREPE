@@ -6,14 +6,13 @@ Cosmic Ray Electron and Positron Excess - Using PWNe [Docker version]
 
 ## Announcement Part!
 
-
 This Docker is built for running the code that is involved in the previous work:
-Some Part will be adjust.
+Some parts will be adjusted and hidden.
 
-This project launch for portflio only.
+This project is for the portfolio only.
 
 --------------------------------------
-I have 2 options for you to build a docker container
+I have 2 options for you to build a Docker container
 
 For Build Docker 
 

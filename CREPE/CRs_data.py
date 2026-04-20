@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+### Some part of the code will be hidden
+
 datafolder = '/CREPE_Dir/CREPE/data/'
 
 # All-lepton (e^{+} + e^{-}) data
@@ -25,27 +27,6 @@ data = datafolder + 'e+e-_ATIC_Nature2008.txt'
 EmeaneA, EmeaneA_low, EmeaneA_up = np.loadtxt(data,skiprows=0,usecols=(0,1, 2), unpack = True)
 fluxeA, fluxeA_low, fluxeA_up = np.loadtxt(data,skiprows=0,usecols=(3, 4, 5), unpack=True)    
 errfluxeA = (fluxeA_low + fluxeA_up)/2
-
-data = datafolder + 'e+e-_CALET_PRL2018.txt'
-EmeaneC, EmeaneC_low, EmeaneC_up = np.loadtxt(data,skiprows=0,usecols=(0,1, 2), unpack = True)
-fluxeC, fluxeC_low, fluxeC_up = np.loadtxt(data,skiprows=0,usecols=(3, 4, 5), unpack=True)    
-errfluxeC = (fluxeC_low + fluxeC_up)/2
-
-data = datafolder + 'e+e-_DAMPE_NATURE2017.txt'
-EmeaneD, EmeaneD_low, EmeaneD_up = np.loadtxt(data,skiprows=0,usecols=(0,1, 2), unpack = True)
-fluxeD, fluxeD_low, fluxeD_up = np.loadtxt(data,skiprows=0,usecols=(3, 4, 5), unpack=True)    
-errfluxeD = (fluxeD_low + fluxeD_up)/2
-
-data = datafolder + 'e+e-_FERMI_PRD2017_LE.txt'
-EmeaneF, EmeaneF_low, EmeaneF_up = np.loadtxt(data,skiprows=0,usecols=(0,1, 2), unpack = True)
-fluxeF, fluxeF_low, fluxeF_up = np.loadtxt(data,skiprows=0,usecols=(3, 4, 5), unpack=True)    
-errfluxeF = (fluxeF_low + fluxeF_up)/2
-
-
-## Electron only
-data = datafolder + 'e-_AMS_PRL2019.txt'
-Emeanem, Emeanem_low, Emeanem_up = np.loadtxt(data,skiprows=0,usecols=(0, 1,2),unpack=True)
-fluxem, fluxem_low, fluxem_up = np.loadtxt(data,skiprows=0,usecols=(3, 4, 5),unpack=True)
 
 
 ### Create Function for Plotting in Results
