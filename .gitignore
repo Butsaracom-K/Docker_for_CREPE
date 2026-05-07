@@ -1,0 +1,4 @@
+.ipynp_checkpoints/
+__pycache__/
+*.sh.save
+*.save
