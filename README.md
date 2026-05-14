@@ -1,17 +1,40 @@
-# CREPE_Docker
-Cosmic Ray Electron and Positron Excess - Using PWNe [Docker version]
+# Automated-Data-Processing-Workflow-with-Docker Project
 
-## Cosmic Ray Electron and Positron Excess Project ####
-### PWN Plotting Python File --- Kritaporn's Research ###
+# Dockerized Scientific Data Processing Workflow
 
-## Announcement Part!
+A containerized Python workflow for automated scientific data processing, parallel execution, and reproducible analytical pipelines using Docker, Bash, and multiprocessing.
 
-This Docker is built for running the code that is involved in the previous work:
-Some parts will be adjusted and hidden.
+This project demonstrates:
+- Workflow automation with Bash
+- Reproducible environments using Docker
+- Parallel data processing using multiprocessing
+- Structured result and output management
+- Modular scientific data analysis pipelines
 
-This project is for the portfolio only.
+Originally developed for computational astrophysics research workflows.
 
 --------------------------------------
+
+## Technologies Used
+
+- Python
+    - pandas - Dataframe
+    - matplotlib
+    - os
+    - numpy
+    - scipy - constants, integrate, interpolate
+    - astropy - fits, unit, constants
+    - emcee
+    - corner
+    - multiprocessing - Pool
+    - unittest
+- Docker
+- Bash
+- Linux
+- Git
+
+---------------------------------------
+
 I have 2 options for you to build a Docker container
 
 For Build Docker 
@@ -112,24 +135,7 @@ bash CREPE_Project_SinglePWN_Case.sh
 bash CREPE_Project_MultiplePWNe_Case.sh
 ```
 
-
 -----------------------
-Design Structure Code
------------------------
-- Python Package Requirements
-    - pandas - Dataframe
-    - matplotlib
-    - os
-    - numpy
-    - scipy - constants, integrate, interpolate
-    - astropy - fits, unit, constants
-    - emcee
-    - corner
-    - multiprocessing - Pool
-    - unittest
-    - utils_CR -- Credit: PDL github
-
-------------------------------------
 
 ```mermaid
 graph TD
@@ -183,29 +189,3 @@ graph TD
 ```
 
 ------------------------------------
-
-
-| Process | Filename/Folder | Description  | Note |
-| :---: | :---: | :--- | :--- |
-| Input | CRs_data.py | Cosmic Ray Electron and Positron data - Database CRDBs | Credit: PDL GitHub |
-|  | spectrum.py | Cosmic Ray Electron and Positron, Cosmic Ray Positron, and Background data | Data From Jounal |
-|  | utils_CR.py | Cosmic Ray Electron and Positron Background Function using with DRAGON2 code | Credit: PDL github |
-|  | ATNF_Pulsar_Catalogue_1kpc.py | Pulsar in 1 kpc -- Database ATNF pulsar Catalogue | /ATNF_Pulsar |
-|  | mockdata.py | Mock Data For Plotting Process | Cosmic Rays, and Background using Interpolation function |
-|  | constants.py | Parameters Constants using for calculations |  |
-|  | equations.py | The Pulsar Wind Nebula (PWN) Model | Model For Fitting with data using MCMC Method |
-|  | directory_setup.py | Set up Directory path for the Results | For Single Young-Ages, Middle-Ages, and Old-Ages PWN Models |
-|  | Fitting Parameters/, Corner Plots/ , WalkerSteps/ | Collect Results from Fitting in Results/ |  |
-|  | Plotting/ | Collects Only Cosmic Ray Electron and Positron Plots |  | 
-|  | Plotting_Positrons/ | Collects Only Cosmic Ray Positron Plots |  |
-|  | Plotting_Combined/ | Collects Both Cosmic Ray Electron and Positron and Cosmic Ray Positron Plots |  |
-| Method | single_PWN_setup.py | Setup information for using in emcee fitting | The emcee Python Package |
-|  | boundaries_setup.py | Setup Boundaries parameters for each cases of Single PWN |  |
-|  | run_young_PWN_MCMC.py | Contains emcee code for fitting in loop functions | For Single Young-Ages PWN Model |
-|  | run_middle_PWN_MCMC.py | Contains emcee code for fitting in loop functions | For Single Middle-Ages PWN Model |
-|  | run_old_PWN_MCMC.py | Contains emcee code for fitting in loop functions | For Single Old-Ages PWN Model |
-|  | Multiple_PWNe_emcee_setup.py | Setup information for using in emcee fitting | Multiple Pulsar Wind Nebulae Fitting Process |
-|  | multiple_PWNe_emcee_running.py | Contains emcee code for Fitting | Combines All PWNe in 1 kpc |
-| Output | Results/ | Results_SinglePWN Folder | Collects Results and All plots from Fitting with emcee |
-| Bash Setup | CREPE_Project_SinglePWN_Case.sh | Create Folders, python ./FittingFile.py | Command line: bash CREPE_Project_SinglePWN_Case.sh |
-|  | CREPE_Project_MultiplePWNe_Case.sh | Create Folders, python ./FittingFile.py | Command line: bash CREPE_Project_MultiplePWNe_Case.sh |
